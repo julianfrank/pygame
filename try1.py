@@ -1,6 +1,8 @@
 """try1"""
 import sys
+
 import pygame
+
 pygame.init()
 
 size = width, height = 640, 240
@@ -18,6 +20,7 @@ while 1:
             sys.exit()
 
     ballrect = ballrect.move(speed)
+    
     if ballrect.left < 0 or ballrect.right > width:
         speed[0] = -speed[0]
     if ballrect.top < 0 or ballrect.bottom > height:
